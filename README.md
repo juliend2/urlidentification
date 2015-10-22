@@ -35,6 +35,16 @@ func main() {
 }
 ```
 
+Running the previous program should outpout:
+
+```
+is absolute url: true
+is network path reference: true
+is relative reference with absolute path: true
+is relative path reference: true
+true
+```
+
 ## License
 
 The [BSD 3-Clause license][bsd].
