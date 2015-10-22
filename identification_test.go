@@ -13,10 +13,10 @@ var relativeRefWithAbsPathURL, _ = url.Parse("/subdir/page.html")
 var relativePathRefURL, _ = url.Parse("subdir/page.html")
 
 func TestAbsolute(t *testing.T) {
-	assert.True(t, IsAbsolute(absoluteURL), "URL should be Absolute")
-	assert.False(t, IsAbsolute(networkPathReferenceURL), "URL should NOT be absolute")
-	assert.False(t, IsAbsolute(relativeRefWithAbsPathURL), "URL should NOT be absolute")
-	assert.False(t, IsAbsolute(relativePathRefURL), "URL should NOT be absolute")
+	assert.True(t, IsAbsoluteURL(absoluteURL), "URL should be Absolute")
+	assert.False(t, IsAbsoluteURL(networkPathReferenceURL), "URL should NOT be absolute")
+	assert.False(t, IsAbsoluteURL(relativeRefWithAbsPathURL), "URL should NOT be absolute")
+	assert.False(t, IsAbsoluteURL(relativePathRefURL), "URL should NOT be absolute")
 }
 
 func TestNetworkPathReference(t *testing.T) {

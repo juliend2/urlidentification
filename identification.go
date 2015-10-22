@@ -43,7 +43,7 @@ func pathStartsWithSingleSlash(url *url.URL) bool {
 
 // Exported functions:
 
-func IsAbsolute(url *url.URL) bool {
+func IsAbsoluteURL(url *url.URL) bool {
 	return url.IsAbs()
 }
 
@@ -61,7 +61,7 @@ func IsRelativePathReferenceURL(url *url.URL) bool {
 }
 
 func Identify(url *url.URL) (int, error) {
-	if IsAbsolute(url) {
+	if IsAbsoluteURL(url) {
 		return Absolute, nil
 	} else if IsNetworkPathReferenceURL(url) {
 		return NetworkPathReference, nil
